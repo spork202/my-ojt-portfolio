@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/fe641ae90a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Images/" class="logo">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                  </ul>
+            </nav>
+            <div class="header-text">
+            <p>Developer</p>
+            <h1>Hi, I'm <span>John</span><br>Marlo Gilbolinga</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-column-1">
+                    <img src="Images/pic.jpg">
+                </div>
+                <div class="about-column-2">
+                    <h1 class = "sub-title">About me</h1>
+                    <p>My name is John Marlo Gilbolinga</p>
+
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('projects')">Projects</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Python</span><br>Data analytics and Machine learning</li>
+                            <li><span>C#</span><br>Desktop applications</li>
+                            <li><span>C</span><br>Fundamentals</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2005-2010</span><br>Fortress College</li>
+                            <li><span>2010-2013</span><br>(Elementary) International Philippine School in Riyadh</li>
+                            <li><span>2013-2017</span><br>(Junior HighSchool) International Philippine School in Riyadh</li>
+                            <li><span>2017-2019</span><br>(Senior HighSchool) Central Philippine University</li>
+                            <li><span>20019-Present</span><br>(College) Bachelor of Science in Computer Science</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="projects">
+                        <ul>
+                            <li><span>Python</span><br>Data analytics and Machine learning</li>
+                            <li><span>C#</span><br>Desktop applications</li>
+                            <li><span>C</span><br>Fundamentals</li>
+                        </ul>
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------Language--------->
+    <div id="skills">
+        <div class="container">
+            <h1 class="sub-ttile">Programming Language</h1>
+            <div class="skills-list">
+                <div>
+                    <i class="fa-brands fa-python"></i>
+                    <h2>Python</h2>
+                    <p>hhdihw jeoqijeioq djwqioejqwiu duqwioeuoiud iqouwsoiuq <br> qeiuqwiue qwieuqieuqiwosiuwq
+                        suqoiweuqwiueqwosqw</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>C#</h2>
+                    <p>hhdihw jeoqijeioq djwqioejqwiu duqwioeuoiud iqouwsoiuq <br> qeiuqwiue qwieuqieuqiwosiuwq
+                        suqoiweuqwiueqwosqw</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-java"></i>
+                    <h2>Java</h2>
+                    <p>hhdihw jeoqijeioq djwqioejqwiu duqwioeuoiud iqouwsoiuq<br> qeiuqwiue qwieuqieuqiwosiuwq
+                        suqoiweuqwiueqwosqw</p>
+                    <a href="#">learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--------Libaries-------->
+    <div id="libraries">
+        <div class="container">
+            <h1 class="sub-title">Libraries</h1>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+</body>
+</html>
