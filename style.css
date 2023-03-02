@@ -8,6 +8,9 @@ body{
     background: #080808;
     color: #fff;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 #header{
     width: 100%;
@@ -168,7 +171,7 @@ nav ul li a:hover::after{
 .skills-list{
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 30px;
-    margin-top: 50px;
+    margin-top: 30px;
     display: grid;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -256,7 +259,7 @@ nav ul li a:hover::after{
 
 /* Hobbies */
 #hobbies{
-    padding: 50px 0;
+    padding: 30px 0;
 
 }
 
@@ -307,4 +310,75 @@ nav ul li a:hover::after{
     color: #ff004f;
     transform: translateY(5px);
 
+}
+
+/* For call screen*/
+
+nav .fa-solid{
+    display: none;
+}
+@media only screen and (max-width:600px){
+    #header{
+        background-image: url(Images/);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height:100vh ;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 40px;
+
+    }
+    .about-column-1, .about-column-2{
+        flex-basis: 100%;
+    }
+    .about-column-1{
+        margin-bottom: 30px;
+    }
+    .about-column-2{
+        font-size: 14px;
+    }
+}
+
+
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(50%);
+    transition: all 1s;
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(3ch);
 }

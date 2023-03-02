@@ -12,22 +12,24 @@
     <div id="header">
         <div class="container">
             <nav>
-                <img src="Images/" class="logo">
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="education.html">Education</a></li>
-                    <li><a href="skills.html">Skills</a></li>
-                    <li><a href="projects.html">Projects</a></li>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACA0lEQVR4nGNgGAWjYBSMglEwCrCAkLyq/4MJM5AKho0Hdt/7PaA4ZNQD90Z4DGy99fN/3tIH/4tXPRqaHuje/eq/aOqB/64dF4emB2Jm3gR7oGSwx8CUQ2+xiuuUnQB7YMnZz3Cx6YffDR4PzD/16b9P7xWwI9HlFp/9DBbXLTuBIg4Sc++89H/ZuS8D54EVF778j5h2/b94+kGwg7B5AJRxQeKxM29ieACEJTMOguU23fhBXw+ALAVZDnOIae3p/317X2OoA2VckDwoI6NnbIPKk3D9qoXH/ldveEo/D8As1ig6/r9+87P/u+5iLz6lMw+BMYiNLr/9zi9wxlbMO4IzBmnmAanMQ2ALQXTGortYHUio+BxQDyw9++W/S/tFlJho2fac6OKzf9/r/4ZVp+D6QZm8c9dL+pdCnTtf/tcoPo41BLEVn+hJUCb7MDgGt9/GjEG6eACEt9z48T9p3m1waUSo+IRhsbQD/wMnXvu/+vLXwVORzTr2Hs4GJRuQB0DJCJva6UcQancPFg8gY1j+6NmDWnySg0MGwgMZC++BkxW20mlIeGA3FXHIqAfuDfEYCBkkmGHUA3lDLAYoAa5RKf+xYYahAlxHPUBj4BqdEugSlfIKV0iTil1AZkWnBNLPA1EpT6nleFcEfkpPD1Db8f+HVCYfBaNgFIyCUcAwWAAA2PrpV54V1IgAAAAASUVORK5CYII=" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#libraries">Libraries</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-x" onclick="closemenu()"></i>
                   </ul>
+                  <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
-            <p class="anim">Stacktrek Intern</p>
+            <p class="anim">StackTrek Intern</p>
             <h1 class="anim">Hi, I'm <span>John</span><br>Marlo Gilbolinga</h1>
             </div>
         </div>
     </div>
-    <div id="about">
+    <div id="about" class="hidden">
         <div class="container">
             <div class="row">
                 <div class="about-column-1">
@@ -36,7 +38,11 @@
                 <div class="about-column-2">
                     <h1 class = "sub-title">About me</h1>
                     <p>My name is John Marlo Gilbolinga from Balabag Pavia, Iloilo, Philippines<br>
-                    Studying Bachelor of Science in Computer Science in Central Philippine</p>
+                    Studying Bachelor of Science in Computer Science in Central Philippine.<br>
+                    I Choose to take BSCS because at a young age I am fasinated with Technology and also because of my Father <br>
+                    who works in the IT industry</p>
+
+                   
 
 
                     <div class="tab-titles">
@@ -66,36 +72,36 @@
                             <li><span>C#</span><br>Desktop applications</li>
                             <li><span>C</span><br>Fundamentals</li>
                         </ul>
-                    </div>   
+                    </div>  
+                    <h1 class = "sub-title">OJT experience</h1>
+                    <p>So far OJT experience in Stacktrek is fun and challenging activities daily<br>
+                       we get to know people from different schools</p> 
                 </div>
             </div>
         </div>
     </div>
     <!--------Hobbies-------->
 
-    <div class="hobbies">
+    <div id="hobbies" class="hidden">
         <div class="container">
             <h1 class="sub-title">Hobbies</h1>
             <div class="hobbies-list">
                 <div class="pic1">
                     <img src="Images/p1.png" alt="">
                     <div class="layer">
-                        <h3>Photography</h3>
-                        <p>Since highschool I love to take pictures of things and it became one of my hobbies today.</p>
+                        <h3>Photography</h3>                    
                     </div>
                 </div>
                 <div class="pic1">
                     <img src="Images/s2.png" alt="">
                     <div class="layer">
-                        <h3>Swimming</h3>
-                        <p>I was once a competitice swimmer, I swam for the CPU swimming team from 2017 to 2021.</p>
+                        <h3>Swimming</h3>                        
                     </div>
                 </div>
                 <div class="pic1">
                     <img src="Images/coding.png" alt="">
                     <div class="layer">
-                        <h3>Coding</h3>
-                        <p>I love to practice my coding when I have free time.</p>
+                        <h3>Coding/Gaming</h3>
                     </div>
                 </div>
                 
@@ -103,7 +109,7 @@
         </div>
     </div>
     <!--------Language--------->
-    <div id="skills">
+    <div id="skills" class="hidden">
         <div class="container">
             <h1 class="sub-ttile">Programming Language</h1>
             <div class="skills-list">
@@ -130,7 +136,7 @@
     </div>
 
     <!--------Libaries-------->
-    <div id="libraries">
+    <div id="libraries" class="hidden">
         <div class="container">
             <h1 class="sub-title">Libraries</h1>
             <div class="lib-list">
@@ -163,7 +169,7 @@
         </div>
     </div>
     <!--------Contact--------->
-    <div id="contact">
+    <div id="contact"class="hidden">
         <div class="container">
             <div class="row">
                 <div class="contact-left">
@@ -197,6 +203,31 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab")
         }
+    </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right ="0"
+        }  
+        function closemenu(){
+            sidemenu.style.right ="-200px"
+        }
+    </script>
+    <script>
+        const observer = new IntersectionObserver((entries) =>{
+            entries.forEach((entry) =>{
+                console.log(entry)
+                if (entry.isIntersecting){
+                    entry.target.classList.add('show');
+                }
+                else{
+                    entry.target.classList.remove('show');
+                }
+            });
+        });
+
+        const hiddenElements = document.querySelectorAll('.hidden');
+        hiddenElements.forEach((el) => observer.observe(el));
     </script>
 </body>
 </html>
